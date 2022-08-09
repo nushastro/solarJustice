@@ -17,9 +17,6 @@ var directions = new Map();
     }
 )
 
-console.log(grid);
-console.log(directions);
-
 
 function drawGrid(gridTbl) {
     gridTbl.innerHTML = "";
@@ -97,23 +94,18 @@ const compassTbl = document.getElementById("compass");
 for (let i = 0; i < 3; i++) {
     const tr = compassTbl.insertRow();
     for (let j = 0; j < 3; j++) {
-        
-            const td = tr.insertCell();
-            let dirn = i == 1 && j == 1 ? "" : ((i+j)%2 == 1 ? (j == 1 ? (i == 0 ? "N" : "S") : (j == 0 ? "W" : "E")): (i==0 ? "N" : "S") + (j==0 ? "W" : "E"))
-            if(directions.get(dirn)) td.style.backgroundColor = "#f70d1a";
-
-            td.appendChild(document.createTextNode(dirn));
-            td.addEventListener("click", (_) => {
-                if(!starTurn && !directions.get(dirn)) { 
-                    directions.set(dirn,true);
-                    td.style.backgroundColor = "#f70d1a"; 
-                    fillWind(dirn);
-                    starTurn = true;
-                    if(Array.from(directions.values()).reduce((prev, current) => prev + current, 0) == 7) {
-                        alert(checkWhoWon()+" won!");
-                    }
-                }
-            } );
+        const td = tr.insertCell();
+        let dirn = i == 1 && j == 1 ? "" : ((i+j)%2 == 1 ? (j == 1 ? (i == 0 ? "N" : "S") : (j == 0 ? "W" : "E")): (i==0 ? "N" : "S") + (j==0 ? "W" : "E"));
+        td.appendChild(document.createTextNode(dirn));
+        td.addEventListener("click", (_) => {
+            if(!starTurn && !directions.get(dirn)) { 
+                directions.set(dirn, true);
+                td.style.backgroundColor = "#f70d1a"; 
+                fillWind(dirn);
+                starTurn = true;
+                if(Array.from(directions.values()).reduce((prev, current) => prev + current, 0) == 7) alert(checkWhoWon()+" won!");
+            }
+        } );
     }
 }
 

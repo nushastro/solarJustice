@@ -1,12 +1,13 @@
 body {
     background-color: #181a1b;
     color: #ffffff;
-    font-family: "Quicksand";
-    padding-left: 22pt;
+    font-family: "Quicksand";   
 }
+
 
 h1 {
     font-size: 25pt;
+    padding-left: 20px;
 }
 
 ol {
@@ -15,7 +16,7 @@ ol {
 
 li {
     font-size: 11pt;
-    margin-left: 26pt;
+    margin-left: 36pt;
 }
 
 .doc {
@@ -25,6 +26,7 @@ li {
 table {
     border: 1px solid white;
     border-collapse: collapse;
+    float: left;
     
 }
 
@@ -33,16 +35,18 @@ td {
     padding-bottom: 25px;
     border: 1px solid white;
     text-align: center;
+    width: 60px;
 }
 
 #board {
     display: table;
-    width: 800px;
+    margin: 10px;
 }
 
 .child {
-    display: table-cell;float: left;
-        position: relative;
+    display: table-cell;
+    float: left;
+    position: relative;
 }
 
 #grid {
