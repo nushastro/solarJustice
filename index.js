@@ -24,14 +24,14 @@ console.log(directions);
 function drawGrid(gridTbl) {
   gridTbl.innerHTML = "";
   gridTbl.style.width = "100px";
-  gridTbl.style.border = "1px solid black";
+  gridTbl.style.border = "1px solid white";
   for(let i = 0; i < 5; i++) {
     const tr = gridTbl.insertRow();
     for(let j = 0; j < 5; j++) {
       let td = tr.insertCell();
       // td.style.backgroundColor = grid[i][j] != "🌞" ? "#fff" : "#f70d1a"; // Green Katamari cuz why not #57f962
       td.appendChild(document.createTextNode(grid[i][j]));
-      td.style.border = '1px solid black';
+      td.style.border = '1px solid white';
       td.addEventListener("click", (_) => {
         if(starTurn == true && grid[i][j] != "🌞") {
           grid[i][j] = "🌞"
@@ -116,14 +116,14 @@ for (let i = 0; i < 3; i++) {
           const second_dirn = j==0 ? "W" : "E";
           dirn = first_dirn + second_dirn;
       }
-      td.style.backgroundColor = !directions.get(dirn) ? "#fff" : "#f70d1a";
+      td.style.backgroundColor = !directions.get(dirn) ? "#181a1b" : "#f70d1a";
 
       td.appendChild(document.createTextNode(dirn));
       td.style.border = '1px solid black';
       td.addEventListener("click", (_) => {
         if(!starTurn && !directions.get(dirn)) { 
           directions.set(dirn,true);
-          td.style.backgroundColor = !directions.get(dirn) ? "#fff" : "#f70d1a"; 
+          td.style.backgroundColor = !directions.get(dirn) ? "#181a1b" : "#f70d1a"; 
           fillWind(dirn);
           console.log(dirn)
           starTurn = true;

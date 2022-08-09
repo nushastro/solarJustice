@@ -1,3 +1,8 @@
+body {
+    background-color: #181a1b;
+    color: #ffffff;
+}
+
 table{
     border: 1px;
     border-collapse: collapse;
