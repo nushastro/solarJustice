@@ -95,7 +95,7 @@ for (let i = 0; i < 3; i++) {
     const tr = compassTbl.insertRow();
     for (let j = 0; j < 3; j++) {
         const td = tr.insertCell();
-        let dirn = i == 1 && j == 1 ? "" : ((i+j)%2 == 1 ? (j == 1 ? (i == 0 ? "N" : "S") : (j == 0 ? "W" : "E")): (i==0 ? "N" : "S") + (j==0 ? "W" : "E"));
+        let dirn = i == 1 && j == 1 ? "🧭" : ((i+j)%2 == 1 ? (j == 1 ? (i == 0 ? "N" : "S") : (j == 0 ? "W" : "E")): (i==0 ? "N" : "S") + (j==0 ? "W" : "E"));
         td.appendChild(document.createTextNode(dirn));
         td.addEventListener("click", (_) => {
             if(!starTurn && !directions.get(dirn)) { 
