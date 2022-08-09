@@ -1,13 +1,57 @@
 body {
     background-color: #181a1b;
     color: #ffffff;
+    font-family: "Quicksand";
+    padding-left: 22pt;
 }
 
-table{
-    border: 1px;
+h1 {
+    font-size: 25pt;
+}
+
+ol {
+    padding: 0
+}
+
+li {
+    font-size: 11pt;
+    margin-left: 26pt;
+}
+
+.doc {
+    max-width: 451.4pt;
+}
+
+table {
+    border: 1px solid white;
     border-collapse: collapse;
+    
 }
 
-td{
-    padding: 25px;
+td {
+    padding-top: 25px;
+    padding-bottom: 25px;
+    border: 1px solid white;
+    text-align: center;
+}
+
+#board {
+    display: table;
+    width: 800px;
+}
+
+.child {
+    display: table-cell;float: left;
+        position: relative;
+}
+
+#grid {
+    width: 300px;
+    height: 300px;
+}
+
+#compass {
+    width: 180px;
+    height: 180px;
+    margin: 60px;
 }

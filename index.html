@@ -1,11 +1,45 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Solar Justice</title>
+	    <meta content="text/html; charset=utf-8" http-equiv="content-type">
         <meta charset="UTF-8">
+        <title>Solar Justice</title>
+        <link rel="stylesheet" href="style.css">
     </head>
     <body>
+        <div class="doc">
+            <h1>Solar Justice</h1>
+            <ol class="c2">
+                <li>
+                    Start with Player 1 (<b>Star</b>) placing a <b>star</b> in the grid.
+                </li>
+                <li>
+                    Player 2 (<b>Stellar Wind</b>) gusts in any of the 8 directions. Once passed, mark it as completed.
+                </li>
+                <li>
+                    <b>Gas clouds</b> drop in the direction of the <b>Stellar Wind</b>.
+                </li>
+                <li>
+                    <b>Stars</b> can plant <b>stars</b> on existing <b>Gas clouds</b>.
+                </li>
+                <li>
+                    Run (2) to (4) seven times (i.e. drop 7 <b>stars</b> on the board, all except one direction of <b>stellar wind</b> used).
+                </li>
+                <li>
+                    If there are any empty spaces at the end, Player 2 wins. Otherwise, Player 1 wins.
+                </li>
+            </ol>
+            <br>
+        </div>
+        <div class="board">
+            <div class="child">
+                <table id="grid"></table>
+            </div>
+            <div class="child">
+                <table id="compass"></table>
+            </div>
+        </div>
+        
         <script src="index.js"></script>
-        <link rel="stylesheet" href="style.css">
     </body>
 </html>
